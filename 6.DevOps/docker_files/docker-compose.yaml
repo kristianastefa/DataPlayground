@@ -1,0 +1,23 @@
+services:
+  webserver:
+    image: kristianastefa/useractivity1
+    container_name: user_activity1
+    expose: ["5000"]
+    build: ./user_activity
+    ports: ["8000:5000"]
+    environment:
+      FLASK_ENV: "development"
+  my_recsy:
+    image: kristianastefa/my_recsys1
+    container_name: myrecsys1
+    expose: ["5000"]
+    build: ./my_recsys
+    environment:
+      FLASK_ENV: "development"
+  my_feedbackcollector:
+    image: kristianastefa/my_feedbackcollector1
+    container_name: myfeedbackcollector1
+    expose: ["5000"]
+    build: ./my_feedbackcollector
+    environment:
+      FLASK_ENV: "development"

@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myfeedbackcollector1
+  labels:
+    app: myfeedbackcollector1
+spec:
+  selector:
+    matchLabels:
+      app: myfeedbackcollector1
+  template:
+    metadata:
+      labels:
+        app: myfeedbackcollector1
+    spec:
+      containers:
+      - name: myfeedbackcollector1
+        image: kristianastefa/my_feedbackcollector1
+        ports:
+        - containerPort: 5000
+
+        
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: myfeedbackcollector1
+spec:
+  selector:
+    app: myfeedbackcollector1
+  type: ClusterIP  
+  ports:
+    - port: 5000
+      targetPort: 5000
