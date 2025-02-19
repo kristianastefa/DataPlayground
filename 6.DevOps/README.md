@@ -13,4 +13,4 @@ This project involves deploying a **recommender system** on **Kubernetes** compo
 **5. Grafana Dashboard:**  Visualizes the collected metrics, offering insights into the system's performance using Prometheus on a Grafana dashboard.
 
 
-For each microservice, Docker images were built using the provided Dockerfiles in the respective folders inside the docker_files folder. After building the Docker images, composing up, and pushing images in the online Docker Hub site, each service wass deployed to Kubernetes cluster and later exposed.
+For each microservice, Docker images were built using the provided Dockerfiles in the respective folders inside the docker_files folder. After building the Docker images, composing up, and pushing images in the online Docker Hub site, each service was deployed to Kubernetes cluster and later exposed.
